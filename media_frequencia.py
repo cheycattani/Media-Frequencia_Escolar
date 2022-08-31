@@ -9,20 +9,20 @@ prova1 = float(input('Digite a nota da prova 1: '))
 prova2 = float(input('Digite a nota da prova 2: '))
 media = (prova1 + prova2) / 2
 
-faltas = int(input('Quantas faltas você tem? '))
+faltas = int(input('Digite o total de faltas: '))
 aulas = 20
 frequencia = (((aulas - faltas) / aulas) * 100)
 
-print('Sua média é:', media)
-print('Seu percentual de presença é:', frequencia, '%')
-
 if frequencia >= 70 and media >= 6:
-    print('Parabéns, aluno aprovado!')
+    resultado = 'Parabéns, aluno aprovado!'
 elif frequencia < 70 and media < 6:
-    print('Aluno reprovado por falta e nota!')
+    resultado = 'Aluno reprovado por falta e nota!'
 elif frequencia < 70 and media >= 6:
-    print('Aluno reprovado por falta!')
+    resultado = 'Aluno reprovado por falta!'
 else:
-    print('Aluno reprovado por nota!')
+    resultado = 'Aluno reprovado por nota!'
 
-
+print('Nome:', nome_aluno)
+print('Média:', media)
+print('Frequência:',frequencia, '%')
+print('Resultado:', resultado)
